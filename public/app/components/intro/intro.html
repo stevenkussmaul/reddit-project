@@ -1,0 +1,29 @@
+<section class="intro-bround">
+  <section class="intro-container">
+    <h1>Reddit <span style="color:#5583b1">Lite</span></h1>
+  </section>
+
+  <section class="button-container">
+      <p>Subreddits</p>
+      <section class="button-wrap">
+       <p ng-click="$ctrl.goEarthporn();">Earth</p>
+       <p ng-click="$ctrl.goAww();">Aww</p>
+       <p>Random</p>
+      </section>
+  </section>
+
+  <section class="description">
+        <i class="material-icons" ng-click="$ctrl.onShow()">help_outline</i>
+  </section>
+
+
+  <section class="fade-cont" ng-show="$ctrl.showInstructions">
+  <section class="instructions" ng-show="$ctrl.showInstructions">
+    <h3>Reddit one post at a time</h3>
+    <p>No need to login in</p>
+    <p>No need to upvote</p>
+    <p>No need to see stupid comments</p>
+    <p>Just you and bite sized content</p>
+  </section>
+  </section>
+</section>
