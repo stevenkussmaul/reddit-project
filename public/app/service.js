@@ -2,14 +2,17 @@
 
 function Service ($http) {
     const self = this;
+    let reply2;
 
     self.getEarth = () => {
         return $http({
             method: "Get",
             url: `https://www.reddit.com/r/EarthPorn.json`
         }).then((response) =>{
-            self.reply = response.data.data;
+            return reply2 = response.data.data;
             console.log(self.reply);
+            console.log(reply2);
+
         })
         
     }

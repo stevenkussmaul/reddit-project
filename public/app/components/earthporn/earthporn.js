@@ -7,12 +7,58 @@ const earthPorn = {
 
         // Service.getEarth()
 
-        var earthObj = Service.getEarth().reply;
+        // let earthObj = Service.getEarth();
 
+        // vm.getEarth = () => {
+        //     return $http({
+        //         method: "Get",
+        //         url: `https://www.reddit.com/r/EarthPorn.json`
+        //     }).then((response) =>{
+        //         vm.reply = response.data.data;
+        //         // vm.reply2 = response;
+
+        //         // console.log(vm.reply);
+        //         // console.log(vm.reply2);
+
+    
+        //     })
+            
+        // }
+
+        // var request = require('request');
+
+        function getEarth() {
+        let earth;
+        // let request = require('request');
+
+        return new Promise(function(resolve, reject) {
+            request('https://www.reddit.com/r/EarthPorn.json', function(error, response, body) {
+            earth = body;
+
+            resolve(earth);
+            });
+        });
+        }
+
+        async function main() {
+            let earth = await getEarth();
+            console.log(earth);
+        }
+
+        main();
+
+
+
+
+        // const reply3 = vm.getEarth();
+        // // console.log(reply2);
+        // console.log(reply3);
+
+        
 
 
         //response contains api info, but with strange form
-        console.log(earthObj);
+        // console.log(earthObj);
         
         //counter initialized
         var i = 0;
